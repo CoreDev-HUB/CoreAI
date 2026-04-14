@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoreAI v2.6.5 // Master Project</title>
+    
+    <title>CoreAI Project // By CoreDev-HUB</title>
+    <link rel="icon" type="image/png" href="logo.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -33,12 +36,12 @@
                     <div class="opti-grid">
                         <div class="opti-box" onclick="sys('sysdm.cpl')">
                             <h3>Rendimiento Visual</h3>
-                            <p>sysdm.cpl > Opciones avanzadas > Ajustar para mejor rendimiento.</p>
+                            <p>Opciones avanzadas > Ajustar para mejor rendimiento.</p>
                             <span>sysdm.cpl</span>
                         </div>
                         <div class="opti-box" onclick="sys('msconfig')">
                             <h3>Núcleos Procesador</h3>
-                            <p>Arranque > Opciones avanzadas > Activar máximo de procesadores.</p>
+                            <p>Arranque > Opciones avanzadas > Activar máximo de núcleos.</p>
                             <span>msconfig</span>
                         </div>
                         <div class="opti-box" onclick="sys('powercfg.cpl')">
@@ -64,7 +67,7 @@
                         </div>
                         <div class="opti-box" onclick="sys('ms-settings:graphics')">
                             <h3>Aceleración Hardware</h3>
-                            <p>Activa Programación de GPU acelerada (HAGS) si tienes dedicada.</p>
+                            <p>Activa HAGS (GPU Acelerada) si tienes gráfica dedicada.</p>
                             <span>GPU Settings</span>
                         </div>
                     </div>
@@ -78,7 +81,7 @@
                             <p>Deshabilita TODO en la pestaña de inicio.</p>
                             <span>taskmgr</span>
                         </div>
-                        <div class="opti-box" onclick="alert('Prioridad de CPU:\n1. Abre tu juego fav.\n2. Detalles en TaskMgr.\n3. Juego -> Prioridad ALTA.\n4. Discord -> Prioridad BAJA.')">
+                        <div class="opti-box" onclick="alert('Prioridad CPU:\n1. Abre tu juego.\n2. Detalles en TaskMgr.\n3. Juego -> Prioridad ALTA.\n4. Discord -> Prioridad BAJA.')">
                             <h3>Prioridad CPU</h3>
                             <p>Juego en ALTA, Discord en BAJA.</p>
                             <span>Instrucciones</span>
@@ -93,7 +96,7 @@
             </section>
 
             <section id="ia" class="tab-content">
-                <div class="header"><h1>IA Neural CMD</h1><p>Generador de scripts .bat inteligentes.</p></div>
+                <div class="header"><h1>IA Neural CMD</h1><p>Generador de scripts inteligentes.</p></div>
                 <div class="ia-window">
                     <div id="ia-log" class="ia-log">Esperando entrada...</div>
                     <div class="ia-input-group">
@@ -115,12 +118,12 @@
             </section>
 
             <section id="drivers" class="tab-content">
-                <div class="header"><h1>Hardware Forge</h1><p>Drivers y herramientas de rendimiento.</p></div>
+                <div class="header"><h1>Hardware Forge</h1><p>Drivers y herramientas.</p></div>
                 <div class="forge-grid">
                     <div class="forge-card drivers-card">
-                        <div class="forge-card-header">
+                        <div class="card-text">
                             <h3>GPU Drivers</h3>
-                            <p>Actualiza tu núcleo gráfico para evitar cuellos de botella y mejorar la estabilidad en juegos.</p>
+                            <p>Actualiza tu núcleo gráfico para evitar cuellos de botella.</p>
                         </div>
                         <div class="forge-buttons-large">
                             <a href="https://www.nvidia.com/es-es/geforce/drivers/" target="_blank" class="f-btn-large nv">NVIDIA Geforce</a>
@@ -128,9 +131,11 @@
                         </div>
                     </div>
                     <div class="forge-card oc-card">
-                        <h3>Manual Overclock</h3>
-                        <p>Ajusta el rendimiento físico mediante MSI Afterburner para ganar potencia extra.</p>
-                        <a href="https://www.msi.com/Landing/afterburner/graphics-cards" target="_blank" class="f-btn msi">Download Afterburner</a>
+                        <div class="card-text">
+                            <h3>MSI Afterburner</h3>
+                            <p>Ajusta el rendimiento físico para ganar potencia extra.</p>
+                        </div>
+                        <a href="https://www.msi.com/Landing/afterburner/graphics-cards" target="_blank" class="f-btn msi">Descargar</a>
                     </div>
                 </div>
             </section>
@@ -147,15 +152,12 @@
                 <div class="header"><h1>System Check</h1><p>Módulo de extracción de hardware local.</p></div>
                 <div class="hardware-card">
                     <div class="hw-info-text">
-                        <p>Debido a las restricciones de seguridad del navegador, se requiere la ejecución de un script nativo firmado para leer los componentes físicos reales (GPU, CPU, RAM) sin filtros de privacidad.</p>
+                        <p>Debido a las restricciones de seguridad del navegador, se requiere la ejecución de un script nativo para leer los componentes físicos reales (GPU, CPU, RAM) sin filtros de privacidad.</p>
                     </div>
                     <button onclick="downloadHardwareBat()" class="download-btn">Descargar System_Check.bat</button>
-                    <div class="security-badge-v2">
-                        <span class="badge-icon">✓</span>
-                        <div class="badge-text">
-                            <strong>VERIFICACIÓN DE LEGITIMIDAD</strong>
-                            <p>Script de solo lectura (WMIC) • Sin acceso a red • 100% Código Abierto e Inofensivo</p>
-                        </div>
+                    <div class="security-badge">
+                        <strong>VERIFICACIÓN DE SEGURIDAD</strong>
+                        <p>✓ Script de solo lectura • Sin acceso a red • 100% Inofensivo</p>
                     </div>
                 </div>
             </section>
