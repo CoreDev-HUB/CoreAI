@@ -10,4 +10,4 @@ Optimización extrema para Windows, limpieza de archivos temporales y gestión d
 - 🔍 Verificación de Hardware nativa.
 
 ## 🔗 Acceso Web
-[Abrir CoreAI Panel](https://coredev-hub.github.io/coreai/)
+[Abrir CoreAI Panel](https://coredev-hub.github.io/CoreAI/)
