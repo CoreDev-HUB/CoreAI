@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoreAI v2.6.5 // Master Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">CORE<span>AI</span></div>
+            <nav>
+                <button onclick="showTab('dash')" class="nav-item active">Panel de Optimización</button>
+                <button onclick="showTab('ia')" class="nav-item">IA Scripting</button>
+                <button onclick="showTab('browsers')" class="nav-item">Web Explorers</button>
+                <button onclick="showTab('drivers')" class="nav-item">Hardware Forge</button>
+                <button onclick="showTab('analysis')" class="nav-item">Seguridad</button>
+                <button onclick="showTab('hardware')" class="nav-item">System Check</button>
+            </nav>
+        </aside>
+
+        <main class="viewport">
+            <section id="dash" class="tab-content active">
+                <div class="header">
+                    <h1>Optimización Extrema</h1>
+                    <p>Configuración nativa para exprimir cada FPS de tu hardware.</p>
+                </div>
+
+                <div class="opti-section">
+                    <h3>1. Ajustes Críticos (Win + R)</h3>
+                    <div class="opti-grid">
+                        <div class="opti-box" onclick="sys('sysdm.cpl')">
+                            <h3>Rendimiento Visual</h3>
+                            <p>sysdm.cpl > Opciones avanzadas > Ajustar para mejor rendimiento.</p>
+                            <span>sysdm.cpl</span>
+                        </div>
+                        <div class="opti-box" onclick="sys('msconfig')">
+                            <h3>Núcleos Procesador</h3>
+                            <p>Arranque > Opciones avanzadas > Activar máximo de procesadores.</p>
+                            <span>msconfig</span>
+                        </div>
+                        <div class="opti-box" onclick="sys('powercfg.cpl')">
+                            <h3>Plan de Energía</h3>
+                            <p>Torre: Máximo Rendimiento. Laptop: Alto Rendimiento.</p>
+                            <span>powercfg.cpl</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="opti-section">
+                    <h3>2. Pantalla y GPU</h3>
+                    <div class="opti-grid">
+                        <div class="opti-box" onclick="sys('ms-settings:display-advanced')">
+                            <h3>Frecuencia (Hz)</h3>
+                            <p>Selecciona los hercios máximos de tu monitor.</p>
+                            <span>Configuración</span>
+                        </div>
+                        <div class="opti-box" onclick="sys('ms-settings:gaming-gamemode')">
+                            <h3>Modo Juego & GPU</h3>
+                            <p>ON si tienes GPU dedicada. OFF si es integrada.</p>
+                            <span>Settings</span>
+                        </div>
+                        <div class="opti-box" onclick="sys('ms-settings:graphics')">
+                            <h3>Aceleración Hardware</h3>
+                            <p>Activa Programación de GPU acelerada (HAGS) si tienes dedicada.</p>
+                            <span>GPU Settings</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="opti-section">
+                    <h3>3. Limpieza y Prioridades</h3>
+                    <div class="opti-grid">
+                        <div class="opti-box" onclick="sys('taskmgr')">
+                            <h3>Apps de Inicio</h3>
+                            <p>Deshabilita TODO en la pestaña de inicio.</p>
+                            <span>taskmgr</span>
+                        </div>
+                        <div class="opti-box" onclick="alert('Prioridad de CPU:\n1. Abre tu juego fav.\n2. Detalles en TaskMgr.\n3. Juego -> Prioridad ALTA.\n4. Discord -> Prioridad BAJA.')">
+                            <h3>Prioridad CPU</h3>
+                            <p>Juego en ALTA, Discord en BAJA.</p>
+                            <span>Instrucciones</span>
+                        </div>
+                        <div class="opti-box" onclick="downloadCleanupBat()">
+                            <h3>Limpieza Temporal</h3>
+                            <p>Borra %tmp%, temp, y Prefetch automáticamente.</p>
+                            <span class="download-link">Descargar .BAT</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ia" class="tab-content">
+                <div class="header"><h1>IA Neural CMD</h1><p>Generador de scripts .bat inteligentes.</p></div>
+                <div class="ia-window">
+                    <div id="ia-log" class="ia-log">Esperando entrada...</div>
+                    <div class="ia-input-group">
+                        <input type="text" id="ia-query" placeholder="Ej: Limpiar temporales">
+                        <button onclick="askIA()">Generar</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="browsers" class="tab-content">
+                <div class="header"><h1>Web Explorers</h1><p>Descarga de navegadores oficiales.</p></div>
+                <div class="browser-grid">
+                    <a href="https://brave.com/download/" target="_blank" class="b-link">Brave Browser (Recomendado)</a>
+                    <a href="https://www.opera.com/gx" target="_blank" class="b-link">Opera GX</a>
+                    <a href="https://www.google.com/chrome/" target="_blank" class="b-link">Google Chrome</a>
+                    <a href="https://www.mozilla.org/firefox/" target="_blank" class="b-link">Mozilla Firefox</a>
+                    <a href="https://www.microsoft.com/edge" target="_blank" class="b-link">Microsoft Edge</a>
+                </div>
+            </section>
+
+            <section id="drivers" class="tab-content">
+                <div class="header"><h1>Hardware Forge</h1><p>Drivers y herramientas de rendimiento.</p></div>
+                <div class="forge-grid">
+                    <div class="forge-card drivers-card">
+                        <div class="forge-card-header">
+                            <h3>GPU Drivers</h3>
+                            <p>Actualiza tu núcleo gráfico para evitar cuellos de botella y mejorar la estabilidad en juegos.</p>
+                        </div>
+                        <div class="forge-buttons-large">
+                            <a href="https://www.nvidia.com/es-es/geforce/drivers/" target="_blank" class="f-btn-large nv">NVIDIA Geforce</a>
+                            <a href="https://www.amd.com/es/support/download/drivers.html" target="_blank" class="f-btn-large amd">AMD Radeon</a>
+                        </div>
+                    </div>
+                    <div class="forge-card oc-card">
+                        <h3>Manual Overclock</h3>
+                        <p>Ajusta el rendimiento físico mediante MSI Afterburner para ganar potencia extra.</p>
+                        <a href="https://www.msi.com/Landing/afterburner/graphics-cards" target="_blank" class="f-btn msi">Download Afterburner</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="analysis" class="tab-content">
+                <div class="header"><h1>Seguridad</h1><p>Análisis de archivos sospechosos.</p></div>
+                <div class="sec-grid">
+                    <div class="sec-card" onclick="window.open('https://tria.ge/dashboard')">Hatching Triage (Sandbox)</div>
+                    <div class="sec-card" onclick="window.open('https://www.virustotal.com/')">VirusTotal</div>
+                </div>
+            </section>
+
+            <section id="hardware" class="tab-content">
+                <div class="header"><h1>System Check</h1><p>Módulo de extracción de hardware local.</p></div>
+                <div class="hardware-card">
+                    <div class="hw-info-text">
+                        <p>Debido a las restricciones de seguridad del navegador, se requiere la ejecución de un script nativo firmado para leer los componentes físicos reales (GPU, CPU, RAM) sin filtros de privacidad.</p>
+                    </div>
+                    <button onclick="downloadHardwareBat()" class="download-btn">Descargar System_Check.bat</button>
+                    <div class="security-badge-v2">
+                        <span class="badge-icon">✓</span>
+                        <div class="badge-text">
+                            <strong>VERIFICACIÓN DE LEGITIMIDAD</strong>
+                            <p>Script de solo lectura (WMIC) • Sin acceso a red • 100% Código Abierto e Inofensivo</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
