@@ -8,6 +8,3 @@ Optimización extrema para Windows, limpieza de archivos temporales y gestión d
 - 🧹 Scripts de limpieza automática (.BAT).
 - 🤖 IA Scripting para CMD.
 - 🔍 Verificación de Hardware nativa.
-
-## 🔗 Acceso Web
-[Abrir CoreAI Panel](https://coredev-hub.github.io/CoreAI/)
